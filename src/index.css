@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* 1. Define your Neon Green variable */
+@theme {
+  --color-neon: #00FF00;
+}
+
+/* 2. Configure Dark Mode to use the 'dark' class */
+@variant dark (&:where(.dark, .dark *));
+
+/* 3. Global Styles */
+body {
+  background-color: white;
+  color: #000a00;
+  font-family: 'Inter', sans-serif; /* Optional: if you use Inter */
+  transition-property: background-color, color;
+  transition-duration: 300ms;
+}
+
+/* 4. Dark Mode Colors */
+:root.dark body {
+  background-color: #050505;
+  color: white;
+}
